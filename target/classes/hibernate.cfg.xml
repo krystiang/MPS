@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mps</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">tiger</property>
+<property name="hibernate.connection.pool_size">10</property>
+<property name="show_sql">true</property>
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.current_session_context_class">thread</property>
+<property name="hbm2ddl.auto">update</property>
+<mapping class="mps.core.fertigung.Bauteil"/>
+<mapping class="mps.core.fertigung.Arbeitsplan"/>
+<mapping class="mps.core.fertigung.Fertigungsauftrag"/>
+<mapping class="mps.core.fertigung.Stueckliste"/>
+<mapping class="mps.core.fertigung.StuecklistenPosition"/>
+<mapping class="mps.core.fertigung.Vorgang"/>
+<mapping class="mps.core.auftragsUndAngebotsVerwaltung.Angebot"/>
+<mapping class="mps.core.auftragsUndAngebotsVerwaltung.Auftrag"/>
+<mapping class="mps.core.auftragsUndAngebotsVerwaltung.Kunde"/>
+<mapping class="mps.core.buchhaltung.Rechnung"/>
+<mapping class="mps.core.versand.Lieferung"/>
+<mapping class="mps.core.versand.Transportauftrag"/>
+
+</session-factory>
+</hibernate-configuration>
